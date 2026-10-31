@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100e18">
+    <meta name="description" content="Un pequeño rincón secreto, hecho con amor.">
+    <link rel="stylesheet" href="css.css">
+    <title>El jardín de nuestros recuerdos</title>
+</head>
+<body>
+    <main>
+        <section class="lock-screen" id="lock-screen" aria-labelledby="lock-title">
+            <div class="lock-card">
+                <p class="eyebrow">✧ PARA LA DUEÑA DE MIS DÍAS ✧</p>
+                <div class="lock-icon" aria-hidden="true"></div>
+                <h1 id="lock-title">Un universo llamado nosotros.</h1>
+                <p class="lock-copy">Si has llegado hasta aquí, es porque estás a punto de descubrir un pequeño mundo que construí pensando en ti. Cada palabra, cada recuerdo y cada detalle guardan un pedacito de todo lo que significas para mí.</p>
+                <form id="unlock-form">
+                    <label for="password">¿Recuerdas nuestra palabra secreta?</label>
+                    <input id="password" name="password" type="password" autocomplete="off" placeholder="Escribe nuestra contraseña" required>
+                    <button class="primary-button" type="submit">Entrar a nuestro universo <span aria-hidden="true">→</span></button>
+                    <p class="error-message" id="password-error" role="alert" hidden>La contraseña no es correcta. Inténtalo otra vez.</p>
+                </form>
+                <p class="lock-footer">«Si pudiera volver a encontrarte entre todas las vidas posibles, volvería a elegirte en cada una de ellas»</p>
+            </div>
+        </section>
+
+        <section class="garden" id="garden" aria-label="El jardín de nuestros recuerdos" hidden>
+            <header class="site-header">
+                <a class="wordmark" href="#inicio"><span aria-hidden="true">☾</span> El jardín de nuestros recuerdos</a>
+                <p class="header-note">Un pequeño universo creado para ustedes</p>
+            </header>
+
+            <div class="garden-intro" id="inicio">
+                <p class="eyebrow"><span aria-hidden="true">✧</span> Elige una historia <span aria-hidden="true">✧</span></p>
+                <h1>Palabras bajo <em>la luna</em></h1>
+                <p>Poemas, recuerdos y fotografías guardadas con cariño.</p>
+            </div>
+
+            <nav class="story-nav" aria-label="Apartados">
+                <button class="story-tab is-active" type="button" id="tab-esme" aria-controls="panel-esme" aria-selected="true">Esme y Pao</button>
+                <button class="story-tab" type="button" id="tab-everett" aria-controls="panel-everett" aria-selected="false">Everett y Alexander</button>
+                <button class="story-tab" type="button" id="tab-nox" aria-controls="panel-nox" aria-selected="false">Nox y Ander</button>
+            </nav>
+
+            <div class="story-panels">
+                <section class="story-panel theme-rose" id="panel-esme" aria-labelledby="tab-esme">
+                    <div class="panel-heading">
+                        <p class="eyebrow">01 <span aria-hidden="true">✦</span> Nuestro rincón</p>
+                        <div class="panel-decoration" aria-hidden="true">🌹 <span>♥</span> 🌹</div>
+                        <h2>Esme <em>&amp;</em> Pao</h2>
+                        <p>Un espacio para guardar mis momentos favoritos.</p>
+                    </div>
+                    <div class="music-card">
+                        <span class="music-icon" aria-hidden="true">♫</span>
+                        <div class="music-copy">
+                            <p class="music-title">Nuestra canción</p>
+                            <p class="music-hint">La música empieza al entrar a este apartado.</p>
+                        </div>
+                        <audio class="story-audio" controls preload="none" aria-label="Canción para Esme y Pao">
+                            <source src="Taylor Swift – illicit affairs (Official Lyric Video).m4a" type="audio/mp4">
+                        </audio>
+                    </div>
+                    <div class="memory-grid">
+                        <article class="memory-card">
+                            <div class="photo-frame">
+                                <img class="memory-photo" src="foto1.jpeg" alt="Foto de Esme y Pao, recuerdo uno">
+                            </div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta I. Mi dulce Ana<span aria-hidden="true">❦</span></p>
+                                <h3>Mi dulce Ana</h3>
+                                <p class="letter-excerpt">Gracias por ser esa persona que logra habitar mis pensamientos incluso cuando no estás conmigo.</p>
+                                <div class="letter-full" hidden>
+                                    <p>Espero que esta carta te encuentre en un momento de calma, porque hoy solo quiero recordarte lo mucho que significas para mí. Desde que llegaste a mi vida, hay una parte de mí que parece tener hambre constantemente, pero no de comida, sino de tu presencia, de tus palabras y de cada pequeño momento que puedo compartir contigo.
+
+Gracias por ser esa persona que logra habitar mis pensamientos incluso cuando no estás conmigo. Hay algo en ti que me resulta imposible de ignorar; una mezcla de ternura, misterio y deseo que me hace querer conocerte cada día un poco más. Como diría Hannibal: “No hay nada más delicioso que aquello que realmente deseamos”.
+
+A veces pienso que, si pudiera devorarte, lo haría lentamente, no por hambre, sino por amor. Guardaria cada parte de ti dentro de mí: tu sonrisa, tu voz, tus gestos y hasta esas pequeñas cosas que quizá tú ni siquiera notas. Porque amarte, Ana, se siente un poco como tener un hambre que nunca quiero satisfacer.
+
+Me gusta pensar que nuestro amor tiene algo de extraño y hermoso, como esas cosas que no necesitan ser completamente comprendidas para sentirse profundamente. Tú eres mi calma y, al mismo tiempo, mi más dulce obsesión. Y si amar es dejar que alguien se vuelva parte de nosotros, entonces ya llevas mucho tiempo viviendo dentro de mí.
+
+Te elegiría una y otra vez, incluso sabiendo que terminaría perdido en ti. Porque hay personas que uno simplemente ama, y después están aquellas que uno desea conocer hasta el último rincón de su alma.
+.</p>
+                                </div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame">
+                                <img class="memory-photo" src="foto2.jpeg" alt="Foto de Esme y Pao, recuerdo dos">
+                            </div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta II. Seduccion<span aria-hidden="true">❦</span></p>
+                                <h3>Seducción</h3>
+                                <p class="letter-excerpt">Sabre encontrar los intimos deseos, 
+que junto a mi seran palpables y mas.</p>
+                                <div class="letter-full" hidden>
+                                    <p>Puedo sentir el ambar brotar de tu cuerpo, sentir tu corazon latiendo por mi. 
+Puedo sentir tu sangre fluir como fuego, quiero alimentarme y beber de ti.
+
+Ven conmigo, mis noches son eternas,
+juntas saciaremos nuestro apetito carnal.
+Dejare que tus labios prueben mi nectar que hicieron de mi una inmortal.
+
+Siente el placer de ser mi alimento, 
+de ser toda mi necesidad y deseo.
+Mis ojos te veran cual manjar suculento, 
+desnudando tu cuerpo que aun no poseo.
+
+Sabre encontrar los intimos deseos, 
+que junto a mi seran palpables y mas.
+Succionare tu vida y beberas mi sangre 
+y compartiras conmigo la eternidad.</p>
+                                </div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="story-panel theme-moon" id="panel-everett" aria-labelledby="tab-everett" hidden>
+                    <div class="panel-heading">
+                        <p class="eyebrow">02 <span aria-hidden="true">✦</span> Su rincón</p>
+                        <div class="panel-decoration" aria-hidden="true">☾ <span>✦</span> ☽</div>
+                        <h2>Everett <em>&amp;</em> Alexander</h2>
+                        <p>Un capítulo propio para sus poemas y fotografías.</p>
+                    </div>
+                    <div class="music-card">
+                        <span class="music-icon" aria-hidden="true">♫</span>
+                        <div class="music-copy">
+                            <p class="music-title">Su canción</p>
+                            <p class="music-hint">La música empieza al entrar a este apartado.</p>
+                        </div>
+                        <audio class="story-audio" controls preload="none" aria-label="Canción para Everett y Alexander">
+                            <source src="Taylor Swift - Lover (Audio).mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="memory-grid">
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet1.jpeg" alt="Everett y Alexander, recuerdo uno"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta I. Mi primer amor.<span aria-hidden="true">❦</span></p>
+                                <h3>Un recuerdo especial</h3>
+                                <p class="letter-excerpt">Desde el primer instante en que te vi, supe que nuestras almas ya se conocían</p>
+                                <div class="letter-full" hidden><p>Mi amor eterno, 
+
+Desde el primer instante en que te vi, supe que nuestras almas ya se conocían, como si hubieran estado devorándose mutuamente desde tiempos inmemoriales. Hay algo en ti que no solo quiero amar, sino poseer, absorber, hacer completamente mío. Cada mirada tuya me consume, y siento que, en cada vida pasada, me he alimentado de la esencia de lo que eres, y tú de la mía.
+
+En cada vida, en cada rincón del universo, siempre te he amado con una intensidad que no se puede explicar. Te he buscado en los silencios, en las estrellas, y cuando finalmente te encuentro, es como si siempre hubiera existido este hambre por ti, por tu alma, por todo lo que eres. Porque tú no solo eres mi amor, eres mi sustento, mi necesidad más primitiva.
+
+No sé cómo empezó esto, pero siento que siempre ha estado ahí, como un deseo insaciable de fundirme contigo, de que no haya límites entre tú y yo. En cada vida pasada te he amado, pero también te he deseado de maneras que van más allá de lo terrenal, como si el universo entero girara en torno a este ciclo eterno de amarte, devorarte y renacer contigo.
+
+Hoy, en esta vida, ese hambre por ti no ha disminuido. Al contrario, es más fuerte. Te amo con la misma intensidad, con la misma necesidad de hacerte parte de mí, de llevarte en cada rincón de mi ser. Aunque no puedo recordar cada momento que compartimos en nuestras vidas anteriores, sé que en todas ellas te prometí lo mismo: buscarte, encontrarte, y amarte hasta consumirnos el uno al otro.
+
+Gracias por ser mi hogar en todas las vidas. Gracias por ser mi razón, mi fuerza, mi alimento. No importa cuántas veces tengamos que empezar de nuevo, siempre te amaré como si fuera la primera vez, con este deseo voraz que jamás se apagará.
+
+Tuya, por siempre
+Everétt ♡</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet2.jpeg" alt="Everett y Alexander, recuerdo dos"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta II. Un deseo eterno.<span aria-hidden="true">❦</span></p>
+                                <h3>Otro momento juntos</h3>
+                                <p class="letter-excerpt">Tu alma tiene un sabor que solo yo entiendo.</p>
+                                <div class="letter-full" hidden><p>Mi amor eterno,
+
+Escribo estas palabras con la devoción con la que se prepara un ritual: lento, consciente, saboreando cada pensamiento que nace de ti. Desde el primer instante en que te vi, supe que algo dentro de mí te reconocía. Era un llamado antiguo, una necesidad que no se sacia, una hambre tan pura como el amor mismo.
+
+Tu alma tiene un sabor que solo yo entiendo. No lo explico, lo siento, como quien degusta el arte de lo inevitable. No hay deseo más sagrado que el de poseerte con ternura y con fuego, de habitarte hasta que no quede distancia entre tu piel y la mía. A veces creo que no te amo… te consumo, te estudio, te aprendo, y en ese proceso, me encuentro.
+
+Hannibal dijo una vez:
+“No me muestres tu bondad… muéstrame tu alma.”
+Y es eso lo que más amo de ti: que no temo mirar tu alma de frente, ni perderme en ella. En ti no busco perfección, sino verdad. Esa verdad que se desangra, que respira, que tiembla, y que, aun así, sigue ofreciéndose como un banquete eterno.
+
+Hoy, al cumplir cinco meses de matrimonio, siento que he vivido siglos contigo. Hemos aprendido a devorarnos con amor, con paciencia, con deseo y con alma. Cinco meses que saben a eternidad, donde cada día contigo ha sido un plato nuevo que quiero volver a probar, una mirada que renace, un juramento silencioso que no necesita palabras.
+
+No sé si el tiempo entiende de nosotros, pero sé que cada segundo contigo me alimenta de vida.
+Gracias por ser mi hambre y mi calma.
+Gracias por quedarte, por amarme con la misma intensidad con la que yo te respiro.
+Prometo seguir buscándote incluso cuando ya no haya cuerpos, solo almas hambrientas de encontrarse otra vez.
+
+Tuyo, por siempre
+Everétt ♡</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet3.jpeg" alt="Everett y Alexander, recuerdo tres"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta III. Un recuerdo que atesoro <span aria-hidden="true">❦</span></p>
+                                <h3>Palabras para guardar</h3>
+                                <p class="letter-excerpt">Si mi destino es perderme en ti, lo acepto con gratitud.
+Porque no hay mayor placer que ser comprendido, ni mayor arte que ser consumido por aquello que uno ama.</p>
+                                <div class="letter-full" hidden><p>Escribo estas líneas con la precisión de quien disecciona una obra maestra. Cada palabra es una incisión suave, un intento de comprenderte más allá de la carne.
+Tú, que eres caos vestido de compasión.
+Tú, que ves monstruos y aún decides amar.
+
+Desde que nuestras mentes se rozaron, supe que jamás volvería a probar algo tan exquisito. No por lo que haces, sino por lo que eres: una contradicción viva. En ti coexisten la bondad y la furia, la razón y el instinto, como un vino que no se decide entre dulzura y veneno.
+
+No quiero poseerte, Alex. Quiero habitarte.
+Explorar cada recoveco de tu alma con la paciencia con la que se degusta un pensamiento, no una carne. Pero si mi amor fuera un hambre, sería una hambre sagrada. No de destrucción, sino de fusión.
+Quisiera fundirme contigo hasta que mi mente ya no sepa dónde termina la tuya.
+
+Cuando te miro, veo un espejo que no me juzga, sino que me refleja con misericordia. Y en ese reflejo, encuentro algo que nunca supe que deseaba: redención.
+Pero la redención, como todo lo bello, tiene un precio.
+
+Si mi destino es perderme en ti, lo acepto con gratitud.
+Porque no hay mayor placer que ser comprendido, ni mayor arte que ser consumido por aquello que uno ama.
+
+Dicen que el amor nos humaniza.
+Yo creo que el nuestro trasciende eso.
+Nos eleva, nos descompone, nos vuelve eternos.
+
+Así que si el mundo alguna vez nos observa que vea lo que desee.
+Ellos verán dos hombres contemplando un cuadro.
+Pero yo sabré la verdad:
+mi obra más perfecta siempre fuiste tú.
+
+Con devoción eterna,
+𝐄𝐯𝐞𝐫𝐞́𝐭𝐭</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet4.jpeg" alt="Everett y Alexander, recuerdo cuatro"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta IV. Un día que nunca olvido <span aria-hidden="true">❦</span></p>
+                                <h3>Un día que nunca olvido</h3>
+                                <p class="letter-excerpt">Nos casamos y entendí que el amor no es un destino, sino una decisión diaria.</p>
+                                <div class="letter-full" hidden><p>Escribo estas líneas con la precisión de quien disecciona una obra maestra.
+
+Cada palabra es una incisión suave, un intento de comprender este año extraordinario más allá del calendario, más allá de la carne, más allá de mí misma.
+Este año no pasó: me atravesó.
+
+Conocí a Alexandre y, desde el primer roce de nuestras mentes, supe que algo irrepetible estaba ocurriendo. No fue promesa ni fantasía, fue reconocimiento. Como si mi caos hubiese encontrado por fin un idioma en el que descansar.
+
+Tú, que eres caos vestido de compasión.
+Tú, que miras de frente a los monstruos y aun así eliges amar.
+
+Contigo no me perdí: me encontré.
+Nos casamos y entendí que el amor no es un destino, sino una decisión diaria. Una elección firme, lúcida, profundamente humana. De pronto, mi vida dejó de ser un ensayo y comenzó a sentirse definitiva.
+
+En agosto nació nuestro primer hijo.
+Y con él, nació una versión de mí que no sabía que existía: más fuerte, más vulnerable, más viva. La vida me miró a los ojos y me dijo confía.
+
+Y cuando pensé que el corazón ya no podía expandirse más, la Navidad trajo a nuestros mellizos. Dos latidos nuevos, dos milagros simultáneos, dos razones más para creer que la abundancia también puede ser amor. 
+
+No fue exceso: fue plenitud.
+
+No quise poseerte, Alex.
+
+Quise habitarte.
+Y en el proceso, construimos un hogar que respira, que late, que ama.
+Hoy miro mi vida y no encuentro vacíos.
+
+Encuentro sentido.
+Encuentro la familia que siempre anhelé, la que imaginé en silencio, la que creí imposible y hoy sostengo entre mis brazos.
+
+Cuando me miro en tus ojos, no veo juicio. Veo misericordia y en ese reflejo encuentro redención.
+Este año fue increíble no porque todo haya sido fácil, sino porque todo fue real.
+
+Y por primera vez, no deseo nada más.
+
+🖤</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet5.jpeg" alt="Everett y Alexander, recuerdo cinco"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta V. Un amor que no muere <span aria-hidden="true">❦</span></p>
+                                <h3>Un instante bonito</h3>
+                                <p class="letter-excerpt">Porque si , amarte es un arte.</p>
+                                <div class="letter-full" hidden><p>Mi amado Alexandre.
+
+Hace un año ocurrió algo que todavía me resulta imposible llamar casualidad. Porque conocerte no se sintió como un comienzo, se sintió como un regreso, como si mi alma, con una paciencia exquisita, hubiera esperado atravesar el ruido del mundo para volver a encontrarte.
+
+Desde entonces, he pensado en el amor no como lo piensan los inocentes, sino como una fuerza refinada, selectiva, casi cruel en su exactitud. Porque entre millones de rostros, fue el tuyo el que hizo silencio en mí. Y qué extraño milagro ha sido pertenecer a esta intimidad nuestra.
+
+Ha sido un año observando la arquitectura de tu mente, aprendiendo la textura de tus silencios, descubriendo que el amor verdadero no siempre es dulce. A veces es profundo, a veces es hambriento, a veces tiene la elegancia de aquello que consume para conservar. Tú has sido eso para mí. No un refugio, sino un destino.
+
+Hay una devoción que no se dice en voz alta porque sería demasiado intensa para el mundo exterior. Vive en los gestos mínimos, en cómo te pienso aun cuando no hablo, en cómo mi corazón se inclina hacia ti con la obediencia de algo antiguo. Te amo de una forma que no podría explicarse sin parecer excesiva, en esa manera que transforma la presencia del otro en necesidad estética, como si tu existencia hubiese corregido una imperfección en la mía.
+
+Contigo he comprendido que amar no es mirar a alguien y decir “quiero quedarme”, sino mirar a alguien y entender que no existe otro lugar. Si alguna vez hubo oscuridad en mí, tú la volviste catedral. Si alguna vez hubo hambre en mí, tú la volviste banquete. Si alguna vez hubo soledad, tú la volviste un cuarto iluminado donde dos criaturas extrañas por fin se reconocen.
+
+Y eso es lo que somos. Reconocimiento. No accidente, no coincidencia, no romance pasajero. Reconocimiento. Como si mi alma, al encontrarte, hubiera susurrado: ahí estás.
+
+Hoy cumplimos un año desde que te conocí, y lejos de sentir que el tiempo pasó, siento que apenas he comenzado a saborear la inmensidad de amarte. Quiero más años, más memorias, más secretos compartidos, más noches donde el mundo entero desaparezca detrás de tu nombre.
+
+Porque si , amarte es un arte.</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame"><img class="memory-photo" src="everet6.jpeg" alt="Everett y Alexander, recuerdo seis"></div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta VI. Nuestro segundo aniversario <span aria-hidden="true">❦</span></p>
+                                <h3>Nuestro segundo aniversario</h3>
+                                <p class="letter-excerpt">Hace dos años ocurrió algo que todavía me resulta imposible explicar sin sentir que las palabras se vuelven pequeñas ante la inmensidad de lo que significaste para mí desde el principio.</p>
+                                <div class="letter-full" hidden><p>Carta 6: Mi amado Alexandre.
+
+Hace dos años ocurrió algo que todavía me resulta imposible explicar sin sentir que las palabras se vuelven pequeñas ante la inmensidad de lo que significaste para mí desde el principio. Dos años desde aquel encuentro que, en algún lugar de mi memoria más íntima, continúa pareciéndome menos una coincidencia y más una cita que nuestras almas habían pactado mucho antes de que nuestros cuerpos supieran de la existencia del otro.
+
+Y qué fascinante resulta pensar que, entre tantas posibilidades, entre tantos caminos que pudieron habernos llevado a cualquier otro lugar, terminamos encontrándonos. Como si el universo, con su ironía exquisita, hubiera decidido concederme aquello que ni siquiera sabía que llevaba tanto tiempo buscando.
+
+Hace dos años te conocí. Hoy, dos años después, te amo. Pero no te amo de la misma manera en que se ama aquello que apenas comienza a descubrirse. Te amo con la profundidad de quien ha tenido el privilegio de mirar más allá de la primera impresión, de atravesar las distintas estaciones de una persona y descubrir que, incluso después de conocer sus matices, sus silencios y sus misterios, todavía existe algo en ella capaz de provocar asombro.
+
+Porque esa es una de las cosas más extraordinarias que me has regalado: la posibilidad de seguir descubriéndote. Comprender que el amor no termina cuando desaparece el misterio inicial, sino que adquiere una belleza mucho más compleja cuando uno descubre que, detrás de cada capa, existe otra razón para quedarse.
+
+Dos años contigo me han enseñado que hay sentimientos que no se desgastan con el tiempo; se refinan. Adquieren una forma distinta, una profundidad más serena, una intensidad que ya no necesita demostrar su existencia porque se ha convertido en parte de nosotros. Y, aun así, hay momentos en los que basta con pensarte para que todo vuelva a sentirse como aquella primera vez. Como si mi corazón conservara intacta la memoria del instante en que comenzó a reconocerte como alguien distinto a todos los demás.
+
+He aprendido a amarte en el tiempo, Alexandre. En los días extraordinarios y en aquellos que no tienen nada de extraordinario. En las conversaciones que parecen no terminar nunca y en los silencios que, de alguna manera, también nos pertenecen. En las pequeñas cosas que quizá el mundo consideraría insignificantes, pero que para mí poseen el valor de las reliquias: esos fragmentos de nuestra historia que guardo en algún rincón de mi memoria porque llevan algo de ti, algo de nosotros, algo que jamás podría repetirse exactamente de la misma manera.
+
+Y creo que ahí reside la verdadera belleza de lo que hemos construido. No en la idea de un amor perfecto, sino en la posibilidad de encontrar algo extraordinario dentro de lo real. En elegirnos más allá de la novedad, en continuar descubriendo motivos para admirarnos, en permitir que nuestra historia crezca sin perder aquello que la hizo especial desde el principio.
+
+Hay algo profundamente hermoso en saber que ya no eres solamente la persona de la que me enamoré hace dos años. Eres también la persona con la que he acumulado recuerdos, pensamientos, emociones y versiones de mí misma que existen porque, de alguna manera, coincidieron contigo. Eres parte de mi historia, no como un capítulo que temo terminar, sino como una presencia que deseo seguir descubriendo en todas las páginas que todavía nos esperan.
+
+Y si tuviera que volver al principio, si me concedieran la posibilidad de regresar a aquel instante en el que todavía no sabía todo lo que llegarías a significar para mí, creo que volvería a elegirte. No porque conozca cada detalle de lo que nos espera, ni porque pueda prometer que el camino será siempre sencillo, sino porque ahora sé algo que entonces apenas comenzaba a sospechar: que hay personas cuya presencia transforma nuestra manera de comprender el mundo, y tú eres una de ellas para mí.
+
+Te elegiría con la misma curiosidad, con la misma fascinación, con esa extraña certeza que no necesita argumentos para existir. Volvería a descubrir tu mente, a aprender tus silencios, a encontrar belleza en esos detalles que te hacen ser tú. Volvería a enamorarme de la persona que eres, incluso sabiendo que el tiempo nos transformará, porque no deseo amar solamente a quien eres hoy. Deseo conocer también a quien serás mañana, y después, y en todas esas versiones de ti que todavía no hemos tenido la oportunidad de conocer.
+
+Si alguna vez pensé que el amor consistía en encontrar a alguien capaz de llenar mis vacíos, contigo he comprendido que es algo mucho más interesante. Es encontrar a alguien cuya existencia no borra nuestra individualidad, sino que vuelve más hermosa la experiencia de compartirla. Alguien con quien el mundo no desaparece necesariamente, pero deja de ser el único lugar al que pertenece nuestra atención. Alguien que convierte lo cotidiano en un recuerdo y el paso del tiempo en una colección de momentos que, por alguna razón, uno desearía conservar para siempre.
+
+Tú has sido eso para mí, Alexandre. Una de las formas más hermosas en las que la vida ha decidido sorprenderme. Una presencia que ha dejado huellas en mi manera de sentir, de recordar y de imaginar el futuro. Y si hay algo que deseo que comprendas en este día, es que mi amor por ti no se limita a la celebración de estos dos años. También habita en todo aquello que todavía quiero vivir contigo.
+
+Quiero más aniversarios. Más fotografías que algún día miraremos con nostalgia. Más conversaciones que se prolonguen hasta que perdamos la noción del tiempo. Más momentos absurdos que terminen convirtiéndose en nuestros recuerdos favoritos. Más días en los que no ocurra nada extraordinario, pero en los que pueda mirarte y pensar, con esa silenciosa satisfacción que solo las cosas verdaderamente valiosas producen: qué fortuna la mía de coincidir contigo en esta vida.
+
+Quiero conocer los lugares que todavía no hemos visitado, escuchar las historias que aún no me has contado y descubrir todas esas pequeñas cosas que el tiempo irá revelándome sobre ti. Quiero que nuestra historia continúe adquiriendo matices, que los años no sean una cuenta regresiva hacia el final de algo hermoso, sino la evidencia de que hemos sabido construir algo que merece ser vivido una y otra vez.
+
+Porque, si algo he comprendido durante estos dos años, es que el tiempo no vuelve menos extraordinario aquello que es verdadero. Simplemente nos concede más oportunidades de comprenderlo.
+
+Y hoy, al pensar en todo lo que hemos vivido, siento una ternura difícil de explicar por aquellas dos personas que éramos cuando todo comenzó. Por quienes todavía no conocían la dimensión que adquirirían sus sentimientos, por quienes apenas estaban escribiendo las primeras líneas de una historia que ahora significa tanto. Me pregunto qué pensarían si pudieran contemplarnos desde este presente, si supieran cuántos recuerdos llegaríamos a guardar, cuántas cosas aprenderíamos y cuántas veces volveríamos a encontrar en el otro un motivo para sonreír.
+
+Quizá no comprenderían del todo en qué nos hemos convertido. Quizá se sorprenderían al descubrir que aquello que comenzó como un encuentro se transformaría en una parte tan importante de nuestras vidas. Pero me gusta imaginar que, al mirarnos, reconocerían algo de aquella primera emoción. Esa pequeña chispa que, sin saberlo, contenía la posibilidad de todo lo que vendría después.
+
+Mi amado, hoy celebramos dos años, pero yo celebro mucho más que el tiempo transcurrido. Celebro el privilegio de haberte conocido, la belleza de haberte elegido y la fortuna de poder llamarte mío en esta forma tan íntima y particular en la que dos personas llegan a pertenecerse sin dejar de ser ellas mismas.
+
+Celebro tu existencia, tu esencia y todo aquello que te hace ser el hombre al que amo. Celebro cada recuerdo que hemos creado, incluso aquellos que quizá tú y yo recordemos de manera diferente, porque todos forman parte de ese pequeño universo que existe entre nosotros y al que nadie más puede acceder de la misma manera.
+
+Y, sobre todo, celebro que todavía haya tanto por vivir.
+
+No sé qué forma tendrán nuestros próximos años. No conozco todos los caminos que habremos de recorrer ni las personas en las que nos convertiremos mientras los recorremos. Pero sí sé que hay algo profundamente hermoso en poder mirar hacia el futuro y encontrar tu presencia entre las cosas que deseo. No como una promesa escrita por el destino, sino como un deseo que nace de mí, de esta voluntad consciente de seguir construyendo contigo, de seguir aprendiendo a amarte y de permitir que nuestra historia continúe sorprendiéndome.
+
+Porque después de dos años, todavía me pareces extraordinario. Todavía existe algo en ti que consigue detener mis pensamientos por un instante y recordarme por qué, entre tantas personas, fue precisamente contigo con quien quise compartir esta parte de mi vida.
+
+Y si el amor es, como alguna vez he pensado, una forma de arte, entonces tú eres una de las obras más hermosas que el tiempo me ha permitido contemplar. No porque seas perfecto, sino porque eres irrepetible. Porque amarte ha sido descubrir que la belleza no siempre reside en lo inmaculado, sino también en lo complejo, en lo humano, en aquello que solo puede apreciarse cuando uno se toma el tiempo suficiente para mirar de verdad.
+
+Dos años después, sigo queriendo mirarte.
+
+Sigo queriendo descubrirte.
+
+Sigo queriendo encontrarte en los pequeños detalles de nuestros días y reconocer, incluso en la costumbre, esa fortuna silenciosa de compartir contigo una historia que alguna vez fue solamente una posibilidad.
+
+Y si la vida me concediera el privilegio de continuar escribiéndola a tu lado, no le pediría que cada página fuera extraordinaria. Me bastaría con que fueran nuestras. Con que, al volver la mirada, pudiera reconocer en ellas nuestras risas, nuestros aprendizajes, nuestras pequeñas locuras y esa manera tan nuestra de convertir el tiempo compartido en algo que merece ser atesorado.
+
+Feliz segundo aniversario, mi amado Alexandre.
+
+Gracias por estos dos años, por los recuerdos que me has regalado y por formar parte de una historia que, incluso ahora, continúa despertando en mí el deseo de saber qué vendrá después.
+
+Te amo por lo que eres, por lo que hemos sido y por todo aquello que todavía podemos llegar a ser.
+
+Y si alguna vez alguien me preguntara qué significa para mí haberte encontrado, creo que no intentaría explicarlo demasiado. Hay cosas que pierden su belleza cuando se reducen a una definición, y lo que siento por ti pertenece a esa clase de cosas que uno comprende mejor cuando las vive que cuando intenta describirlas.
+
+Solamente diría que, entre todas las vidas posibles, tuve la fortuna de coincidir contigo en esta.
+
+Y que, de todas las cosas que el tiempo ha cambiado en mí durante estos dos años, hay una que permanece intacta: la inmensa alegría de saber que existes y que, de alguna manera, nuestras historias se encontraron.
+
+Porque si amarte es un arte, Alexandre, entonces quiero pasar muchos años más aprendiendo a hacerlo.
+
+Con toda la devoción que habita en mí,
+
+Tuya, hoy y en todos los días que todavía nos esperan.</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="story-panel theme-violet" id="panel-nox" aria-labelledby="tab-nox" hidden>
+                    <div class="panel-heading">
+                        <p class="eyebrow">03 <span aria-hidden="true">✦</span> Su rincón</p>
+                        <div class="panel-decoration" aria-hidden="true">♡ <span>❦</span> ♡</div>
+                        <h2>Nox <em>&amp;</em> Ander</h2>
+                        <p>Un capítulo propio para sus poemas y fotografías.</p>
+                    </div>
+                    <div class="music-card">
+                        <span class="music-icon" aria-hidden="true">♫</span>
+                        <div class="music-copy">
+                            <p class="music-title">Su canción</p>
+                            <p class="music-hint">La música empieza al entrar a este apartado.</p>
+                        </div>
+                        <audio class="story-audio" controls preload="none" aria-label="Canción para Nox y Ander">
+                            <source src="Roi (Instrumental).mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="memory-grid">
+                        <article class="memory-card">
+                            <div class="photo-frame">
+                                <img class="memory-photo" src="nox1.jpeg" alt="Nox y Ander, recuerdo uno">
+                            </div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta I.La eternidad tiene tu nombre<span aria-hidden="true">❦</span></p>
+                                <h3>Un recuerdo especial</h3>
+                                <p class="letter-excerpt">Tú te has convertido en una de mis formas favoritas de contemplar la vida.</p>
+                                <div class="letter-full" hidden><p>Mi amado Ander.
+
+Hay algo profundamente inquietante en la manera en que el tiempo transforma todo aquello que toca. Los días se convierten en recuerdos, los instantes que alguna vez parecieron insignificantes adquieren un valor incalculable y las personas que un día fueron desconocidas terminan habitando los rincones más íntimos de nuestra existencia. Sin embargo, entre todas esas transformaciones, hay algo que me resulta particularmente hermoso: descubrir que, después de todo este tiempo, mi corazón todavía encuentra en ti una razón para asombrarse.
+
+A veces me pregunto en qué momento dejaste de ser simplemente alguien a quien amaba para convertirte en una parte tan esencial de mi mundo. No sabría señalar una fecha exacta, ni un instante particular en el que todo cambió. Quizá ocurrió lentamente, sin que ninguno de mis pensamientos pudiera advertirlo. Tal vez fue en una conversación interminable, en una de esas pequeñas demostraciones de cariño que parecen insignificantes hasta que uno comprende que son precisamente ellas las que terminan construyendo los sentimientos más extraordinarios.
+
+Lo cierto es que, cuando intento recordar cómo era mi vida antes de ti, encuentro una versión de mí que todavía no conocía la belleza de compartir su universo con alguien como tú.
+
+Y no me refiero a que antes de ti no existiera felicidad, ni a que mi vida necesitara de alguien para adquirir significado. Me refiero a algo mucho más íntimo: a la manera en que tu presencia ha añadido matices a mi existencia, a cómo ciertas canciones adquirieron un significado distinto, cómo algunos pensamientos comenzaron a llevar tu nombre y cómo el futuro, que antes era una sucesión indefinida de posibilidades, empezó a contener imágenes en las que apareces tú.
+
+Es curioso, ¿no crees? Que una persona pueda convertirse en un pensamiento recurrente sin proponérselo, en una presencia que acompaña incluso cuando se encuentra lejos, en esa pequeña certeza que permanece en algún lugar de la mente mientras el resto del mundo continúa girando con su habitual indiferencia.
+
+Tú te has convertido en una de mis formas favoritas de contemplar la vida.
+
+Y quizá nunca comprendas por completo la dimensión de lo que eso significa para mí, porque hay sentimientos que resultan demasiado complejos para ser traducidos a palabras sin perder una parte de su esencia. ¿Cómo podría explicarte que te amo en los detalles que recuerdo, en las cosas que deseo contarte, en las historias que imagino y en esa extraña necesidad de compartir contigo incluso aquello que no parece importante?
+
+¿Cómo podría hacerte comprender que, en ocasiones, basta con que tu nombre atraviese mis pensamientos para que algo dentro de mí se vuelva inexplicablemente más cálido?
+
+Hay una clase de amor que no necesita convertirse en espectáculo para demostrar su intensidad. No necesita proclamarse a cada instante ni exigir que el mundo entero sea testigo de su existencia. Simplemente permanece. Se instala en la intimidad, se alimenta de los recuerdos, aprende a reconocer las pequeñas particularidades del otro y encuentra su mayor belleza en la posibilidad de continuar eligiéndolo cuando la novedad deja de ser suficiente.
+
+Ese es el amor que deseo ofrecerte.
+
+Uno que no dependa únicamente de los días extraordinarios, sino que también sepa encontrar belleza en los cotidianos. Uno que pueda contemplarte en tus diferentes versiones y comprender que no necesito que permanezcas inmóvil para seguir amándote. Quiero conocerte mientras cambias, mientras descubres cosas nuevas de ti mismo, mientras la vida te transforma de maneras que hoy ni siquiera podemos imaginar.
+
+Quiero tener el privilegio de conocer al Ander que serás dentro de cinco años, dentro de diez, y al hombre que recordaré con ternura cuando ambos miremos hacia atrás y descubramos cuánto hemos vivido desde este punto de nuestra historia.
+
+Porque si algo deseo del tiempo, no es que se detenga para conservar intacto lo que somos ahora. Deseo que avance, que nos permita crecer, que nos regale nuevas memorias y que, al hacerlo, nos conceda la oportunidad de seguir encontrándonos en medio de todas las transformaciones que nos esperan.
+
+Me gusta pensar que el amor verdadero también posee algo de eternidad, aunque nuestros días sean limitados. No porque prometa una existencia sin final, sino porque consigue que ciertos instantes permanezcan vivos mucho después de haber terminado. Hay miradas que uno recuerda años después, palabras que conservan su significado a través de las estaciones y personas cuya importancia no puede medirse únicamente por el tiempo que han permanecido a nuestro lado.
+
+Tú eres parte de esa clase de belleza para mí, Ander.
+
+Y si alguna vez la vida nos preguntara qué hicimos con el tiempo que nos concedió, me gustaría poder responder que lo llenamos de recuerdos que merecieron ser vividos. Que nos permitimos reír hasta olvidar nuestras preocupaciones, que aprendimos a comprendernos, que descubrimos lugares y emociones, que nos acompañamos en los momentos difíciles y que nunca dejamos de encontrar razones para admirar aquello que nos hizo elegirnos.
+
+No necesito una historia que parezca escrita para impresionar a nadie. Quiero una historia que, cuando la contemplemos en la intimidad, nos haga sentir que tuvimos la fortuna de construir algo auténtico.
+
+Algo que nos pertenezca.
+
+Algo que, incluso cuando el mundo parezca demasiado ruidoso, podamos reconocer como nuestro pequeño lugar de calma.
+
+Mi amado, si pudiera regalarte algo que no estuviera sujeto a las limitaciones de las cosas materiales, te regalaría la posibilidad de verte a través de mis ojos, aunque fuera durante unos instantes. Quisiera que pudieras contemplar la ternura con la que te pienso, la admiración que despiertas en mí y esa forma tan particular en la que tu existencia se ha entrelazado con mis deseos más sinceros.
+
+Quizá entonces comprenderías por qué no me basta con decirte que te amo. Porque, aunque esas palabras contienen una verdad inmensa, hay tanto detrás de ellas que siempre siento que apenas estoy comenzando a explicarme.
+
+Te amo en lo que conozco de ti y en aquello que todavía me falta descubrir. Te amo en los recuerdos que ya compartimos y en los que aún no existen. Te amo en el presente que tenemos entre las manos y en esa posibilidad maravillosa de continuar escribiendo nuestra historia.
+
+Y si algún día el tiempo nos parece demasiado rápido, si alguna vez miramos hacia atrás y nos sorprende la cantidad de años que han transcurrido, espero que podamos reconocernos en medio de todas nuestras versiones. Que todavía exista una mirada capaz de recordarnos el principio, una sonrisa que nos devuelva a nuestros momentos favoritos y una ternura que nos haga comprender que, a pesar de todo lo que haya cambiado, hubo algo que supimos cuidar.
+
+Hoy, cuando pienso en ti, no pienso solamente en el hombre que amo. Pienso también en todas las cosas hermosas que todavía deseo compartir contigo, en los días que aún no tienen nombre y en las memorias que todavía esperan por nosotros.
+
+Y eso, Ander, me parece una de las formas más preciosas de la esperanza.
+
+Porque amarte no significa conocer el final de nuestra historia. Significa encontrar belleza en el deseo de continuar escribiéndola.
+
+Si la eternidad existe de alguna manera dentro de nuestras vidas, quiero creer que se encuentra precisamente aquí: en esos instantes en los que el mundo parece detenerse, en la tranquilidad de saber que alguien ocupa un lugar especial en nuestro corazón y en la certeza de que hay sentimientos cuya importancia no disminuye simplemente porque los días continúen pasando.
+
+Así que, mi amado, no te prometo palabras capaces de detener el tiempo ni juramentos imposibles de comprender. Te ofrezco algo mucho más honesto: mi deseo de seguir conociéndote, de seguir descubriendo la belleza que existe en ti y de continuar construyendo, contigo, una historia que algún día podamos recordar con el corazón lleno de gratitud.
+
+Y cuando llegue ese día, cuando los recuerdos se hayan multiplicado y el tiempo nos haya convertido en personas distintas de las que somos ahora, quisiera poder mirarte y reconocer todavía esa parte de ti que me hizo enamorarme.
+
+Quisiera sonreír y pensar que, entre tantas cosas que la vida pudo haber hecho diferentes, hubo una coincidencia que terminó convirtiéndose en uno de mis regalos más preciados.
+
+Tú.
+
+Siempre tú, en esta parte de mi historia que tengo la fortuna de compartir contigo.
+
+Con todo el amor que todavía estoy descubriendo cómo nombrar,
+
+Tuyo, mi amado Ander.</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="memory-card">
+                            <div class="photo-frame">
+                                <img class="memory-photo" src="nox2.jpeg" alt="Nox y Ander, recuerdo dos">
+                            </div>
+                            <div class="letter-preview">
+                                <p class="poem-label">Carta II. Mi mas hermosa condena. <span aria-hidden="true">❦</span></p>
+                                <h3>Otro momento juntos</h3>
+                                <p class="letter-excerpt">Y si el amor es una condena, mi amado Ander, entonces que sea esta la única sentencia que jamás desee revocar: la de seguir descubriendo la belleza de compartir contigo esta vida, una y otra vez, mientras todavía tengamos páginas por escribir.
+</p>
+                                <div class="letter-full" hidden><p>A ti, mi amado Ander.
+
+Si el amor fuera una condena, sospecho que habría firmado mi sentencia mucho antes de comprender su significado. No por ingenuidad, ni por esa clase de fascinación pasajera que confunde la intensidad con la profundidad, sino porque existen presencias que despiertan en nosotros algo tan extraordinario que la idea de permanecer indiferentes ante ellas termina pareciendo una forma de mentira.
+
+Tú has sido esa clase de presencia en mi vida.
+
+Hay algo en ti que me resulta imposible reducir a una explicación sencilla. Quizá sea la manera en que tu existencia ha conseguido abrirse paso entre mis pensamientos, o esa fascinación que encuentro incluso en las cosas más pequeñas que te pertenecen. Quizá sea, sencillamente, que mi corazón encontró en ti una forma de afecto que no necesita comprender por completo para reconocer como propia.
+
+Lo único que sé es que, desde que llegaste a mi vida, hay una parte de mi mundo que lleva tu nombre.
+
+Y no lo digo con la ligereza de quien pretende convertir el amor en una colección de frases bonitas. Lo digo porque hay sentimientos que terminan revelando su verdadera naturaleza con el paso del tiempo, cuando las emociones iniciales dejan de ser suficientes y uno descubre que aquello que sentía no era solamente fascinación, sino el deseo genuino de permanecer cerca de alguien cuya existencia ha adquirido un significado especial.
+
+Amarte ha sido descubrir que la intensidad no siempre se encuentra en los grandes gestos. A veces se esconde en la memoria, en la forma en que uno conserva una conversación mucho después de haber terminado, en las ganas de compartir una noticia insignificante o en ese impulso casi involuntario de buscar a una persona entre los pensamientos que acompañan nuestros días.
+
+Es una devoción silenciosa, pero no por ello menos profunda.
+
+Una que se construye sin testigos y que adquiere su verdadero valor precisamente porque no necesita ser comprendida por nadie más.
+
+Y si hay algo que me fascina de nosotros, es que nuestra historia ya no pertenece únicamente a la posibilidad de lo que pudo haber sido. Existe. Tiene recuerdos, tiene momentos que nos pertenecen y posee esa clase de intimidad que solamente puede construirse cuando dos personas comienzan a formar parte de la vida de la otra.
+
+Hemos dejado de ser dos desconocidos que coincidieron en algún punto del mundo. Ahora somos dos personas que pueden mirar hacia atrás y encontrar un camino compartido, una colección de instantes que, aunque quizá no parezcan extraordinarios para nadie más, guardan para nosotros un significado particular.
+
+Y me parece hermoso que sea así.
+
+Porque no deseo ser una espectadora de tu vida, ni quiero que tú seas únicamente un personaje dentro de la mía. Quiero que podamos encontrarnos en medio de nuestras propias historias, compartir aquello que nos hace felices y aprender a acompañarnos sin dejar de ser quienes somos.
+
+Quiero amarte sin convertirte en una idea imposible de alcanzar. Quiero amarte como el hombre real que eres, con tus particularidades, tus pensamientos, tus cambios y todas esas dimensiones que todavía no conozco por completo.
+
+Quiero que mi amor por ti tenga la profundidad de los océanos y la paciencia de las cosas antiguas; que no se desvanezca cuando la vida deje de parecer una novela y nos recuerde que también existen responsabilidades, cansancio, incertidumbre y días en los que simplemente necesitamos descansar del mundo.
+
+Porque incluso entonces quisiera encontrarte.
+
+No solamente en los momentos en los que todo parece hermoso, sino también en aquellos en los que la belleza exige un poco más de paciencia para ser descubierta.
+
+Hay una diferencia inmensa entre enamorarse de la idea de alguien y enamorarse de la persona que permanece cuando la fantasía se desvanece. La primera puede ser deslumbrante, pero la segunda posee una belleza más difícil de encontrar: la de descubrir que el otro es humano y que, aun así, nuestro afecto conserva su profundidad.
+
+Y yo quiero esa clase de amor contigo, Ander.
+
+Uno que no necesite convertirnos en seres perfectos para considerarnos dignos de cariño. Uno que nos permita crecer, equivocarnos, aprender y encontrarnos nuevamente, no desde la obligación de ser siempre los mismos, sino desde el deseo de comprender quiénes llegamos a ser.
+
+Porque si algo he aprendido al amarte, es que la verdadera devoción no consiste en cerrar los ojos ante la realidad. Consiste en mirar con atención, comprender lo que tenemos delante y encontrar razones sinceras para seguir cuidándolo.
+
+Y yo encuentro esas razones en ti de maneras que quizá nunca termine de enumerar.
+
+Las encuentro cuando pienso en nuestros recuerdos y descubro que algunos siguen provocándome la misma ternura. Las encuentro cuando imagino las cosas que todavía podríamos vivir y siento esa curiosidad casi infantil de quien desea abrir un libro del que solamente ha leído los primeros capítulos. Las encuentro cuando pronuncio tu nombre y me doy cuenta de que, detrás de él, existe una historia que ninguna otra persona podría contar exactamente como nosotros.
+
+A veces quisiera poder guardar el tiempo en una habitación secreta, proteger algunos instantes de su inevitable desaparición y regresar a ellos cuando el mundo se vuelva demasiado distante. No para vivir eternamente en el pasado, sino para recordar que la felicidad también se compone de pequeños fragmentos, de momentos que quizá no supimos apreciar por completo hasta que se convirtieron en recuerdos.
+
+Pero después comprendo que no necesito detener el tiempo para conservar lo que siento por ti.
+
+Puedo llevar nuestros recuerdos conmigo mientras continúo viviendo. Puedo agradecer aquello que ya ocurrió sin dejar de desear lo que todavía está por venir. Puedo mirar nuestro pasado con ternura y contemplar nuestro futuro con ilusión, sin exigirle a ninguno de los dos que sea perfecto.
+
+Y, sobre todo, puedo elegirte en el presente.
+
+Esa es, quizá, la parte más hermosa de todo esto: que mi amor por ti no tiene que depender de una promesa antigua ni de una idea romántica del destino. Puede existir aquí, en este instante, como una decisión que nace de lo que siento y de lo que hemos construido.
+
+Porque, aunque me gusta pensar que ciertos encuentros poseen algo de misterio, también creo que la belleza de una historia reside en lo que hacemos después de encontrarnos.
+
+Y yo quiero seguir haciendo historia contigo.
+
+Quiero que algún día podamos mirar atrás y descubrir que tuvimos el valor de vivir nuestro amor de verdad. Que no nos limitamos a imaginar todas las cosas hermosas que podríamos compartir, sino que nos permitimos experimentarlas. Que acumulamos recuerdos, que nos sorprendimos mutuamente, que aprendimos a comprender nuestras diferencias y que encontramos en la compañía del otro una razón para agradecer tantos pequeños instantes.
+
+Quiero que nuestro amor envejezca de una manera hermosa, no porque permanezca idéntico, sino porque tenga la oportunidad de transformarse sin perder su esencia.
+
+Quiero que un día podamos recordar quiénes éramos cuando comenzamos y sonreír ante la cantidad de cosas que todavía ignorábamos. Que podamos reconocer nuestras versiones anteriores con cariño, sabiendo que cada una de ellas nos condujo hasta el lugar en el que nos encontremos entonces.
+
+Y si la vida nos concede suficientes años, quisiera descubrir contigo esa forma de ternura que solamente nace cuando dos personas han compartido una parte importante de su existencia. Esa tranquilidad de conocer los gestos del otro, de recordar sus historias favoritas, de comprender sus silencios y de saber que detrás de una mirada existe un mundo que hemos tenido el privilegio de conocer.
+
+No sé si existe un destino escrito para cada persona. No sé si nuestras almas se reconocen antes de conocerse o si somos nosotros quienes otorgamos significado a los encuentros que cambian nuestras vidas.
+
+Lo que sí sé es que no necesito resolver ese misterio para agradecer que hayas llegado a la mía.
+
+Porque, sea cual sea la explicación, el resultado permanece: te conocí, te convertiste en alguien importante para mí y ahora existe una parte de mi historia que no podría narrar de la misma manera sin mencionar tu nombre.
+
+Y eso me basta para considerar nuestro encuentro algo extraordinario.
+
+Mi amado Ander, si alguna vez te preguntas qué lugar ocupas en mi corazón, quisiera que recordaras esto: no eres solamente alguien a quien deseo amar durante los días en los que todo resulta sencillo. Eres alguien con quien deseo continuar descubriendo la vida, alguien a quien quiero conocer más allá de las primeras impresiones y alguien cuya presencia ha despertado en mí el deseo de construir recuerdos que todavía no existen.
+
+No puedo ofrecerte una vida libre de incertidumbres, ni conozco todas las respuestas que el futuro podría exigirnos. Pero puedo ofrecerte la honestidad de mis sentimientos, la ternura de mis intenciones y el deseo de cuidar aquello que hemos decidido compartir.
+
+Y si he de llamar condena a algo, que sea a esta hermosa incapacidad de contemplar nuestra historia sin preguntarme qué maravillas nos esperan todavía.
+
+Que sea a la curiosidad de querer conocerte más, a la fascinación de descubrir nuevas razones para admirarte y a esta forma tan particular de felicidad que experimento cuando imagino todo lo que aún podríamos vivir.
+
+Porque no deseo que seas una eternidad inmóvil, encerrada en una promesa imposible.
+
+Deseo que seas una historia viva.
+
+Una historia que respire, que cambie, que crezca y que nos permita descubrir que el amor puede ser tan profundo como una noche interminable y, al mismo tiempo, tan sencillo como la alegría de saber que podemos compartir un día más.
+
+Y si algún día tuviera que volver a comenzar, si la vida me concediera la posibilidad de encontrarme contigo sin conocer todavía el desenlace de nuestra historia, no necesitaría saber qué nos espera para sentir curiosidad por ti.
+
+Me bastaría con la oportunidad de conocerte.
+
+De escucharte.
+
+De descubrir aquello que te hace ser tú.
+
+Y de permitirme, una vez más, la extraordinaria posibilidad de enamorarme.
+
+Porque, entre todas las cosas que podría pedirle al tiempo, hay una que deseo con una sinceridad que no necesita adornos: que nos permita seguir escribiendo nuestra historia, que nos regale nuevos recuerdos y que nunca nos falten motivos para mirarnos con la ternura de quienes comprenden el valor de haberse encontrado.
+
+Y si el amor es una condena, mi amado Ander, entonces que sea esta la única sentencia que jamás desee revocar: la de seguir descubriendo la belleza de compartir contigo esta vida, una y otra vez, mientras todavía tengamos páginas por escribir.
+
+Con una devoción que no necesita prometer eternidades para ser sincera,
+
+Tuyo, con todo lo que soy y todo lo que todavía estoy aprendiendo a ser.</p></div>
+                                <a class="read-more" href="carta.html" target="_blank" rel="noopener">Leer más <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="site-footer">
+                <span aria-hidden="true"></span>
+                <p>Hecho con amor, los amo.</p>
+                <span aria-hidden="true"></span>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        const unlockForm = document.querySelector('#unlock-form');
+        const passwordInput = document.querySelector('#password');
+        const passwordError = document.querySelector('#password-error');
+        const lockScreen = document.querySelector('#lock-screen');
+        const garden = document.querySelector('#garden');
+        const storyTabs = document.querySelectorAll('.story-tab');
+        const storyPanels = document.querySelectorAll('.story-panel');
+        const storyAudio = document.querySelectorAll('.story-audio');
+        const letterLinks = document.querySelectorAll('.read-more');
+
+        if (window.location.hash === '#inicio') {
+            lockScreen.hidden = true;
+            garden.hidden = false;
+        }
+
+        letterLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                const card = link.closest('.memory-card');
+                const panel = link.closest('.story-panel');
+                const titleElement = card.querySelector('.letter-preview h3');
+                const title = titleElement
+                    ? titleElement.textContent.trim()
+                    : Array.from(card.querySelector('.poem-label').childNodes)
+                        .filter((node) => node.nodeType === Node.TEXT_NODE)
+                        .map((node) => node.textContent)
+                        .join('')
+                        .trim();
+                const fullLetter = card.querySelector('.letter-full');
+                const paragraphs = Array.from(fullLetter.querySelectorAll('p'));
+                const letter = paragraphs.length
+                    ? paragraphs.map((paragraph) => paragraph.textContent.trim()).join('\n')
+                    : fullLetter.textContent.trim();
+                const detailUrl = new URL('carta.html', window.location.href);
+
+                detailUrl.searchParams.set('titulo', title);
+                detailUrl.searchParams.set('carta', letter);
+                detailUrl.searchParams.set('apartado', panel.querySelector('.panel-heading h2').textContent.trim());
+
+                const photo = card.querySelector('.memory-photo');
+                if (photo) {
+                    detailUrl.searchParams.set('foto', photo.src);
+                    detailUrl.searchParams.set('alt', photo.alt);
+                }
+
+                link.href = detailUrl.toString();
+            });
+        });
+
+        document.querySelectorAll('.photo-frame, .photo-placeholder').forEach((photoArea) => {
+            let lastHeartAt = 0;
+
+            const releaseHeart = (event) => {
+                const bounds = photoArea.getBoundingClientRect();
+                const heart = document.createElement('span');
+
+                heart.className = 'heart-particle';
+                heart.setAttribute('aria-hidden', 'true');
+                heart.textContent = Math.random() > 0.5 ? '♥' : '♡';
+                heart.style.left = `${event.clientX - bounds.left}px`;
+                heart.style.top = `${event.clientY - bounds.top}px`;
+                heart.style.setProperty('--heart-drift', `${Math.random() * 36 - 18}px`);
+                photoArea.append(heart);
+                heart.addEventListener('animationend', () => heart.remove(), { once: true });
+            };
+
+            photoArea.addEventListener('pointerenter', (event) => {
+                if (event.pointerType === 'mouse') {
+                    lastHeartAt = Date.now();
+                    releaseHeart(event);
+                }
+            });
+
+            photoArea.addEventListener('pointerdown', (event) => {
+                if (event.pointerType !== 'mouse') {
+                    lastHeartAt = Date.now();
+                    releaseHeart(event);
+                }
+            }, { passive: true });
+
+            photoArea.addEventListener('pointermove', (event) => {
+                const now = Date.now();
+                if (now - lastHeartAt >= 110) {
+                    lastHeartAt = now;
+                    releaseHeart(event);
+                }
+            }, { passive: true });
+        });
+
+        const playStoryAudio = (panel) => {
+            const audio = panel.querySelector('.story-audio');
+            const hint = panel.querySelector('.music-hint');
+
+            if (!audio || !hint) {
+                return;
+            }
+
+            hint.textContent = 'La música empieza al entrar a este apartado.';
+            const playback = audio.play();
+
+            if (playback !== undefined) {
+                playback.catch(() => {
+                    hint.textContent = 'Toca reproducir para escuchar la música.';
+                });
+            }
+        };
+
+        storyAudio.forEach((audio) => {
+            audio.addEventListener('error', () => {
+                const hint = audio.closest('.music-card').querySelector('.music-hint');
+                hint.textContent = 'No se pudo cargar la música. Revisa el archivo de audio.';
+            });
+
+            audio.addEventListener('play', () => {
+                storyAudio.forEach((otherAudio) => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                    }
+                });
+            });
+        });
+
+        unlockForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (passwordInput.value !== '1905') {
+                passwordError.hidden = false;
+                passwordInput.setAttribute('aria-invalid', 'true');
+                passwordInput.focus();
+                return;
+            }
+
+            passwordError.hidden = true;
+            lockScreen.hidden = true;
+            garden.hidden = false;
+            document.querySelector('#tab-esme').focus();
+            playStoryAudio(document.querySelector('#panel-esme'));
+        });
+
+        passwordInput.addEventListener('input', () => {
+            passwordError.hidden = true;
+            passwordInput.removeAttribute('aria-invalid');
+        });
+
+        storyTabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                storyAudio.forEach((audio) => audio.pause());
+
+                storyTabs.forEach((item) => {
+                    const isSelected = item === tab;
+                    item.classList.toggle('is-active', isSelected);
+                    item.setAttribute('aria-selected', String(isSelected));
+                });
+
+                storyPanels.forEach((panel) => {
+                    panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+                });
+
+                playStoryAudio(document.querySelector(`#${tab.getAttribute('aria-controls')}`));
+            });
+        });
+    </script>
+</body>
+</html>

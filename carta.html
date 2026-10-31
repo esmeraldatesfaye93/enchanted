@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff2f7">
+    <meta name="description" content="Una carta especial, enmarcada con cariño.">
+    <link rel="stylesheet" href="css.css">
+    <title>Una carta especial</title>
+</head>
+<body>
+    <main class="letter-page">
+        <article class="letter-detail">
+            <div class="letter-ornament" aria-hidden="true">🌷 <span>♡</span> 🐈 <span>♡</span> 🌷</div>
+            <p class="eyebrow" id="letter-group">Un recuerdo para guardar</p>
+            <h1 id="letter-title">Carta</h1>
+            <div class="letter-divider" aria-hidden="true"><span>❀</span> ♥ <span>❀</span></div>
+            <div class="letter-photo-wrap">
+                <img class="letter-detail-photo" id="letter-photo" alt="" hidden>
+                <div class="letter-detail-photo-placeholder" id="photo-placeholder" hidden>Agrega una foto para este recuerdo</div>
+            </div>
+            <div class="letter-copy-frame">
+                <p class="letter-salutation" aria-hidden="true">Con todo mi cariño <span>♡</span></p>
+                <div class="letter-detail-copy" id="letter-content"></div>
+                <div class="letter-closing"><span id="letter-closing-text">Te amo</span> <span aria-hidden="true">♥</span></div>
+            </div>
+            <div class="letter-ornament letter-ornament-bottom" aria-hidden="true">🐈 <span>♡</span> 🌸 <span>♡</span> 🐈</div>
+            <a class="letter-back" href="index.html#inicio">← Volver al jardín</a>
+        </article>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('titulo');
+        const image = params.get('foto');
+        const letter = params.get('carta');
+        const group = params.get('apartado');
+        const titleElement = document.querySelector('#letter-title');
+        const contentElement = document.querySelector('#letter-content');
+        const photo = document.querySelector('#letter-photo');
+        const photoPlaceholder = document.querySelector('#photo-placeholder');
+        const closingText = document.querySelector('#letter-closing-text');
+
+        if (!title || !letter) {
+            titleElement.textContent = 'Carta no encontrada';
+            contentElement.textContent = 'Vuelve al jardín y selecciona una carta del catálogo.';
+        } else {
+            titleElement.textContent = title;
+            document.title = `${title} | El jardín de la noche`;
+            document.querySelector('#letter-group').textContent = group || 'Un recuerdo para guardar';
+            const normalizedGroup = (group || '').toLocaleLowerCase();
+            if (normalizedGroup.includes('esme')) {
+                closingText.textContent = 'Te amo Pao';
+            } else if (normalizedGroup.includes('everett')) {
+                closingText.textContent = 'Te amo Alex';
+            } else if (normalizedGroup.includes('ander')) {
+                closingText.textContent = 'Te amo Ander';
+            }
+
+            letter.split('\n').forEach((paragraph) => {
+                if (paragraph.trim()) {
+                    const element = document.createElement('p');
+                    element.textContent = paragraph;
+                    contentElement.append(element);
+                }
+            });
+
+            if (image) {
+                photo.src = image;
+                photo.alt = params.get('alt') || `Fotografía de ${title}`;
+                photo.hidden = false;
+                photo.addEventListener('error', () => {
+                    photo.hidden = true;
+                    photoPlaceholder.hidden = false;
+                }, { once: true });
+            } else {
+                photoPlaceholder.hidden = false;
+            }
+        }
+    </script>
+</body>
+</html>
