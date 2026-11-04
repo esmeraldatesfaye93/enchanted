@@ -625,38 +625,73 @@ Tuyo, con todo lo que soy y todo lo que todavía estoy aprendiendo a ser.</p></d
             garden.hidden = false;
         }
 
-        letterLinks.forEach((link) => {
-            link.addEventListener('click', () => {
-                const card = link.closest('.memory-card');
-                const panel = link.closest('.story-panel');
-                const titleElement = card.querySelector('.letter-preview h3');
-                const title = titleElement
-                    ? titleElement.textContent.trim()
-                    : Array.from(card.querySelector('.poem-label').childNodes)
-                        .filter((node) => node.nodeType === Node.TEXT_NODE)
-                        .map((node) => node.textContent)
-                        .join('')
-                        .trim();
-                const fullLetter = card.querySelector('.letter-full');
-                const paragraphs = Array.from(fullLetter.querySelectorAll('p'));
-                const letter = paragraphs.length
-                    ? paragraphs.map((paragraph) => paragraph.textContent.trim()).join('\n')
-                    : fullLetter.textContent.trim();
-                const detailUrl = new URL('carta.html', window.location.href);
+letterLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        const card = link.closest('.memory-card');
+        const panel = link.closest('.story-panel');
 
-                detailUrl.searchParams.set('titulo', title);
-                detailUrl.searchParams.set('carta', letter);
-                detailUrl.searchParams.set('apartado', panel.querySelector('.panel-heading h2').textContent.trim());
+        if (!card || !panel) {
+            event.preventDefault();
+            return;
+        }
 
-                const photo = card.querySelector('.memory-photo');
-                if (photo) {
-                    detailUrl.searchParams.set('foto', photo.src);
-                    detailUrl.searchParams.set('alt', photo.alt);
-                }
+        const titleElement = card.querySelector('.letter-preview h3');
+        const labelElement = card.querySelector('.poem-label');
+        const fullLetter = card.querySelector('.letter-full');
 
-                link.href = detailUrl.toString();
-            });
-        });
+        const title = titleElement
+            ? titleElement.textContent.trim()
+            : labelElement?.textContent.trim() || 'Un recuerdo especial';
+
+        if (!fullLetter) {
+            event.preventDefault();
+            alert('No se encontró el contenido de esta carta.');
+            return;
+        }
+
+        const letter = Array.from(fullLetter.querySelectorAll('p'))
+            .map(p => p.textContent.trim())
+            .filter(Boolean)
+            .join('\n');
+
+        const groupElement = panel.querySelector('.panel-heading h2');
+        const group = groupElement
+            ? groupElement.textContent.trim()
+            : 'Un recuerdo para guardar';
+
+        const cards = Array.from(panel.querySelectorAll('.memory-card'));
+        const cardNumber = cards.indexOf(card) + 1;
+
+        const cartaId = `${panel.id}-${cardNumber}`;
+
+        const photo = card.querySelector('.memory-photo');
+
+        const cartaData = {
+            titulo: title,
+            carta: letter,
+            apartado: group,
+            foto: photo ? photo.getAttribute('src') : '',
+            alt: photo ? photo.alt : ''
+        };
+
+        try {
+            localStorage.setItem(
+                `carta-${cartaId}`,
+                JSON.stringify(cartaData)
+            );
+
+            const detailUrl = new URL('carta.html', window.location.href);
+            detailUrl.searchParams.set('id', cartaId);
+
+            link.href = detailUrl.href;
+
+        } catch (error) {
+            event.preventDefault();
+            alert('No se pudo preparar la carta. Intenta nuevamente.');
+            console.error(error);
+        }
+    });
+});
 
         document.querySelectorAll('.photo-frame, .photo-placeholder').forEach((photoArea) => {
             let lastHeartAt = 0;

@@ -29,53 +29,88 @@
         </article>
     </main>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const title = params.get('titulo');
-        const image = params.get('foto');
-        const letter = params.get('carta');
-        const group = params.get('apartado');
-        const titleElement = document.querySelector('#letter-title');
-        const contentElement = document.querySelector('#letter-content');
-        const photo = document.querySelector('#letter-photo');
-        const photoPlaceholder = document.querySelector('#photo-placeholder');
-        const closingText = document.querySelector('#letter-closing-text');
+ const params = new URLSearchParams(window.location.search);
+const cartaId = params.get('id');
 
-        if (!title || !letter) {
-            titleElement.textContent = 'Carta no encontrada';
-            contentElement.textContent = 'Vuelve al jardín y selecciona una carta del catálogo.';
-        } else {
-            titleElement.textContent = title;
-            document.title = `${title} | El jardín de la noche`;
-            document.querySelector('#letter-group').textContent = group || 'Un recuerdo para guardar';
-            const normalizedGroup = (group || '').toLocaleLowerCase();
-            if (normalizedGroup.includes('esme')) {
-                closingText.textContent = 'Te amo Pao';
-            } else if (normalizedGroup.includes('everett')) {
-                closingText.textContent = 'Te amo Alex';
-            } else if (normalizedGroup.includes('ander')) {
-                closingText.textContent = 'Te amo Ander';
-            }
+const titleElement = document.querySelector('#letter-title');
+const contentElement = document.querySelector('#letter-content');
+const photo = document.querySelector('#letter-photo');
+const photoPlaceholder = document.querySelector('#photo-placeholder');
+const closingText = document.querySelector('#letter-closing-text');
 
-            letter.split('\n').forEach((paragraph) => {
-                if (paragraph.trim()) {
-                    const element = document.createElement('p');
-                    element.textContent = paragraph;
-                    contentElement.append(element);
-                }
-            });
+let cartaData = null;
 
-            if (image) {
-                photo.src = image;
-                photo.alt = params.get('alt') || `Fotografía de ${title}`;
-                photo.hidden = false;
-                photo.addEventListener('error', () => {
-                    photo.hidden = true;
-                    photoPlaceholder.hidden = false;
-                }, { once: true });
-            } else {
-                photoPlaceholder.hidden = false;
-            }
+try {
+    const savedLetter = localStorage.getItem(`carta-${cartaId}`);
+
+    if (savedLetter) {
+        cartaData = JSON.parse(savedLetter);
+    }
+} catch (error) {
+    console.error('Error al recuperar la carta:', error);
+}
+
+if (!cartaData || !cartaData.titulo || !cartaData.carta) {
+
+    titleElement.textContent = 'Carta no encontrada';
+
+    contentElement.textContent =
+        'Vuelve al jardín y selecciona una carta del catálogo.';
+
+} else {
+
+    titleElement.textContent = cartaData.titulo;
+
+    document.title = `${cartaData.titulo} | El jardín de la noche`;
+
+    document.querySelector('#letter-group').textContent =
+        cartaData.apartado || 'Un recuerdo para guardar';
+
+    const normalizedGroup = (cartaData.apartado || '').toLocaleLowerCase();
+
+    if (normalizedGroup.includes('esme')) {
+        closingText.textContent = 'Te amo Pao';
+    } else if (normalizedGroup.includes('everett')) {
+        closingText.textContent = 'Te amo Alex';
+    } else if (normalizedGroup.includes('ander')) {
+        closingText.textContent = 'Te amo Ander';
+    }
+
+    cartaData.carta.split('\n').forEach((paragraph) => {
+
+        if (paragraph.trim()) {
+
+            const element = document.createElement('p');
+
+            element.textContent = paragraph;
+
+            contentElement.append(element);
         }
+
+    });
+
+    if (cartaData.foto) {
+
+        photo.src = new URL(
+            cartaData.foto,
+            window.location.href
+        ).href;
+
+        photo.alt = cartaData.alt || `Fotografía de ${cartaData.titulo}`;
+
+        photo.hidden = false;
+
+        photo.addEventListener('error', () => {
+            photo.hidden = true;
+            photoPlaceholder.hidden = false;
+        }, { once: true });
+
+    } else {
+
+        photoPlaceholder.hidden = false;
+
+    }
+}
     </script>
 </body>
 </html>
